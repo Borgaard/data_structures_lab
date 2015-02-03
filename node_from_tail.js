@@ -9,10 +9,10 @@
   list.add("three");
   list.add("four");  
 
-  sample input: nodeFromTail = function(0)
+  sample input: list.nodeFromTail(0)
   sample output: {data: "four", next: null}
 
-  sample input: nodeFromTail = function(1)
+  sample input: list.nodeFromTail(1)
   sample output: {data: "two", next: null}
 */
 
