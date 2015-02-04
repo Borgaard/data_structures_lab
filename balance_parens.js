@@ -16,5 +16,23 @@
 */
 
 var balanceParens = function(string) {
-  // your solution goes here	
-};
+  var result = [],
+      pairs  = {
+        "(": ")"
+      },
+      popped = "";
+  for(var i = 0; i < string.length; i++) {
+    
+    if (string[i] !== ")") {
+      result.push(string[i]);
+    } else {
+      popped = result.pop() //popped already defined error in repl.it?
+
+      if (pairs[popped] !== string[i]) {
+        return "Unbalanced";
+      }
+    }
+  }
+  //double bang "[]" is either(?) -> true -> false
+  return !!result; //if result is null, force either true or false};
+}
